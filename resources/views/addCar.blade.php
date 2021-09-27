@@ -10,8 +10,8 @@
         </div>
     @endif
 
-    <div class="row" style="padding: 2% 0%;">
-        <div class="card col-12 offset-md-3 col-md-6">
+    <div class="row" >
+        <div class="card col-12 offset-md-3 col-md-6" style="padding: 0px;":>
             <div class="card-header">
                 <h5 class="card-title col-12">CAR DETAILS</h5>                        
             </div>
