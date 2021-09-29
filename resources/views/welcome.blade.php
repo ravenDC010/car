@@ -15,7 +15,7 @@
             <div class=" col-12 col-md-4" style="padding: 2% 3%;">
                 <div class="card">
                     <div class="card-header" style="border-radius: 25px 25px 0px 0px;">
-                        <h5 class="card-title col-12 col-md-8">{{$Car->name}}</h5>                        
+                        <h5 class="card-title col-12 text-center">{{$Car->name}}</h5>                        
                     </div>
                     <div class="card-body">
                         <div class="row">
