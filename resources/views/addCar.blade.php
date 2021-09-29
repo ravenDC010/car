@@ -12,7 +12,7 @@
 
     <div class="row" >
         <div class="card col-12 offset-md-3 col-md-6" style="padding: 0px;":>
-            <div class="card-header">
+            <div class="card-header" style="border-radius: 25px 25px 0px 0px;">
                 <h5 class="card-title col-12">CAR DETAILS</h5>                        
             </div>
             <div class="card-body">
@@ -20,7 +20,7 @@
                     @csrf
 
                     <div class="form-group row">
-                        <label for="name" class="col-md-6 col-form-label text-md-right">{{ __('MODEL') }}</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('MODEL') }}</label>
 
                         <div class="col-md-6">
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="number" class="col-md-6 col-form-label text-md-right">{{ __('NUMBER') }}</label>
+                        <label for="number" class="col-md-4 col-form-label text-md-right">{{ __('NUMBER') }}</label>
 
                         <div class="col-md-6">
                             <input id="number" type="text" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number" autofocus>
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="seat" class="col-md-6 col-form-label text-md-right">{{ __('SEATING CAPACITY') }}</label>
+                        <label for="seat" class="col-md-4 col-form-label text-md-right">{{ __('SEATING CAPACITY') }}</label>
 
                         <div class="col-md-6">
                             <input id="seat" type="text" class="form-control @error('seat') is-invalid @enderror" name="seat" value="{{ old('seat') }}" required autocomplete="seat" autofocus>
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="rent" class="col-md-6 col-form-label text-md-right">{{ __('RENT PER DAY') }}</label>
+                        <label for="rent" class="col-md-4 col-form-label text-md-right">{{ __('RENT PER DAY') }}</label>
 
                         <div class="col-md-6">
                             <input id="rent" type="text" class="form-control @error('rent') is-invalid @enderror" name="rent" value="{{ old('rent') }}" required autocomplete="rent" autofocus>

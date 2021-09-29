@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Car Rental Agency') }}</title>
+    <title>Car Rental Agency</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background: linear-gradient( to bottom right, #4ba3f5, #1e7cd3);">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Car Rental Agency

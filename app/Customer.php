@@ -16,8 +16,12 @@ class Customer extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function cars(){
-        return $this->belongsToMany('App\Car');
+    // public function cars(){
+    //     return $this->belongsToMany('App\Car');
+    // }
+
+    public function customercars(){
+        return $this->hasMany('App\CustomerCar');
     }
 
 }

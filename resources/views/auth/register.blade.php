@@ -6,7 +6,7 @@
         {{-- agency --}}
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Register Agency') }}</div>
+                <div class="card-header" style="border-radius: 25px 25px 0px 0px;">{{ __('Register Agency') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -93,24 +93,6 @@
 
                         <div class="form-group row">
                             <input id="agency" type="hidden" class="form-check-input" name="role" value="1">
-
-                            {{-- <label for="role" class="col-md-6 col-form-label text-md-right">{{ __('You are a') }}</label>
-                            <div class="col-md-6">
-                                <div class="form-check form-check-inline">
-                                    <input id="customer" type="radio" class="form-check-input @error('role') is-invalid @enderror" name="role" value="0" required autofocus>
-                                    <label class="form-check-label" for="male">Customer</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input id="agency" type="radio" class="form-check-input @error('role') is-invalid @enderror" name="role" value="1" required autofocus>
-                                    <label class="form-check-label" for="agency">Agency</label>
-                                </div>
-
-                                @error('role')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div> --}}
                         </div>
 
                         <div class="form-group row mb-0">
@@ -128,7 +110,7 @@
         {{-- customer --}}
                 <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Register Customer') }}</div>
+                <div class="card-header" style="border-radius: 25px 25px 0px 0px;">{{ __('Register Customer') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

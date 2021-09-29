@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Car;
-use App\Customer_Car;
+use App\CustomerCar;
 
 class ViewCarController extends Controller
 {
@@ -29,7 +29,7 @@ class ViewCarController extends Controller
 
 
 //        return Car::create([
-        Customer_Car::create([
+        CustomerCar::create([
             'customer_id' => Auth::user()->customer->id,
             'car_id' => request('car'),
             'start_date' => date('Y-m-d'),

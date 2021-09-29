@@ -14,34 +14,35 @@
             @foreach ($Cars as $Car)
             <div class=" col-12 col-md-4" style="padding: 2% 3%;">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="border-radius: 25px 25px 0px 0px;">
                         <h5 class="card-title col-12 col-md-8">{{$Car->name}}</h5>                        
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <h6 class="col-12 col-md-6">CAR NUMBER</h6>
+                            <h6 class="col-12 col-md-6 text-right">CAR NUMBER</h6>
                             <h6 class="col-12 col-md-6">{{$Car->number}}</h6>
                         </div>
                         <div class="row">
-                            <h6 class="col-12 col-md-6">SEATING CAPACITY</h6>
+                            <h6 class="col-12 col-md-6 text-right">SEATING CAPACITY</h6>
                             <h6 class="col-12 col-md-6">{{$Car->seat}}</h6>
                         </div>
                         <div class="row">
-                            <h6 class="col-12 col-md-6">RENT</h6>
+                            <h6 class="col-12 col-md-6 text-right">RENT</h6>
                             <h6 class="col-12 col-md-6">RS. {{$Car->rent}}</h6>
                         </div>
 
-                        @auth
 
                         <form method="POST" action="/viewcar/store">
                             @csrf
+
+                            @auth
 
                             <div class="form-group row">
                                 <input type="hidden" class="form-check-input" name="car" value="{{$Car->id}}">
                             </div>
     
                             <div class="form-group row">
-                                <label for="day" class="col-12 col-md-6 col-form-label">{{ __('NUMBER OF DAYS') }}</label>
+                                <label for="day" class="col-12 col-md-6 col-form-label text-right">{{ __('NUMBER OF DAYS') }}</label>
     
                                 <div class="col-md-6">
                                     <select name="day" class="form-select @error('day') is-invalid @enderror" required autofocus>
@@ -59,10 +60,14 @@
                                 </div>
                             </div>
 
+                            @endauth
+
+                            
+                            @auth
                             @if (! Auth::user()->is_agency )
 
                             <div class="form-group row mb-0">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 offset-md-5 col-md-2">
                                     <button type="submit" class="btn btn-primary">
                                         BOOK
                                     </button>
@@ -70,9 +75,22 @@
                             </div>
 
                             @endif
+                            @endauth
+
+                            @guest
+                            <div class="form-group row mb-0">
+                                <div class="col-12 offset-md-5 col-md-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        BOOK
+                                    </button>
+                                </div>
+                            </div>
+                            @endguest
+
+                            
                         </form>
                         
-                        @endauth
+                        
 
                     </div>
                 </div>

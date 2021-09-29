@@ -13,7 +13,7 @@ class CreateCustomerCarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer__cars', function (Blueprint $table) {
+        Schema::create('customer_cars', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('car_id');
@@ -41,6 +41,6 @@ class CreateCustomerCarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer__cars');
+        Schema::dropIfExists('customer_cars');
     }
 }
