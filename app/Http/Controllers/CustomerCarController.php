@@ -11,19 +11,15 @@ class CustomerCarController extends Controller
 {
     public function index()
     {
-        // $userAgency = Auth::user()->agency->id;
-         $car = CustomerCar::orderBy('car_id')->get();
-        //  dd($car);
-        // dd(Auth::user());
-        // $car = DB::table('CustomerCar')
-        //         ->join('Car','CustomerCar.car_id','=','Car.id')
-        //         ->join('Customer','CustomerCar.customer_id','=','Customer.id')
-        //         ->select('CustomerCar.day' , 'CustomerCar.start_date' , 'Car.name', 'Car.number', 'Customer.name', 'Customer.phone')
-        //         ->where('Car.agency_id' , '=' , $agency)
-        //         ->get();
-        //  $customerCar = Customer_Car::where('parent_community_id', '=', $agency)->paginate(15);
-        //ddd($customerCar);
+        $car = CustomerCar::select('car_id')->groupBy('car_id')->get();
         return view('viewBookedCars', ['CustomerCars' => $car]);
     }
+
+    public function viewCustomers(Request $request, $id)
+    {
+        $bookedCustomer = CustomerCar::where('car_id', '=', $id)->get();
+        return view('viewCustomers', ['BookedCustomers' => $bookedCustomer]);
+    }
+
 
 }

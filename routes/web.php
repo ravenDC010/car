@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/addcar', 'CarController@index')->name('addcar');
         Route::post('/addcar/store',  'CarController@store');
         Route::get('/viewbookedcar', 'CustomerCarController@index')->name('viewbookedcar');
-
+        Route::get('/viewbookedcar/{id}', 'CustomerCarController@viewCustomers');
     });
 
     Route::post('/viewcar/store',  'ViewCarController@store');
